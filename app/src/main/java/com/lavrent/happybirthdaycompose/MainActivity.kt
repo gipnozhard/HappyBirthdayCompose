@@ -1,6 +1,7 @@
 package com.lavrent.happybirthdaycompose
 
 import android.os.Bundle
+import android.os.Message
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,7 +23,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
                 }
             }
         }
@@ -30,11 +30,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun GreetingText(message: String,
+                 modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = message
     )
+
 }
 
 @Preview(showBackground = true,
@@ -42,7 +43,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 )
 @Composable
 fun BirthdayCardPreview() {
-    HappyBirthdayComposeTheme {
-        Greeting("Pavel")
-    }
+    GreetingText(message = "Happy Birthday Andrey!")
 }
