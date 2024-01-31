@@ -49,9 +49,12 @@ class MainActivity : ComponentActivity() {
 fun GreetingText( // составная функция
     message: String, // сообщение пощдравление
     from: String, // от кого поздравление
-    modifier: Modifier = Modifier) {
+    modifier: Modifier = Modifier
+        .fillMaxSize()
+        .padding(8.dp)
+) {
     Column( // столбец
-        modifier = modifier.padding(8.dp), // отступы вокруг столбца
+        modifier = modifier, // отступы вокруг столбца
         verticalArrangement = Arrangement.Center
     ) {
         Text(
