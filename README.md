@@ -9,7 +9,11 @@ https://github.com/google-developer-training/basic-android-kotlin-compose-birthd
 
 
 Пример готовой открытки-приложения:
+
 ![image](https://github.com/gipnozhard/HappyBirthdayCompose/assets/71705375/2fc52177-1281-445c-9216-34fb3cd224c2)
 
 Готовый код от Google, этой же программы, если не понятно у меня как сделанно.
+
+https://github.com/google-developer-training/basic-android-kotlin-compose-birthday-card-app
+
 Это мой учебный проект. (Разобраля с Compose Jetpack азы, понял что такое UI, составные функции, обозначения аннтотациями, @Composable перобразует данные в коде в UI, стандартные составные элеменыт,макеты(layouts) в Compose: Column, Row и Box, научился добавлять текстовые элементы и изображения, работа с ресурсами, и работа с Modifiers.)
