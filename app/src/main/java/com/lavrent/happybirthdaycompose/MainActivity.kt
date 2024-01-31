@@ -17,6 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -79,7 +80,9 @@ fun GreetingImage(
     Box(modifier) {
         Image(
             painter = image,
-            contentDescription = null
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            alpha = 0.5F
         )
         GreetingText(
             message = message,
@@ -92,7 +95,7 @@ fun GreetingImage(
 
 @Preview( // аннотация пердназначена только для предварительного просмотра ан панеле Design
     showBackground = true, // добавление фона
-    showSystemUi = true // показывает интерфейс смартфона
+    //showSystemUi = true // показывает интерфейс смартфона
 )
 @Composable // обозначение составной функци в Compose, эта функция предназначена для преобразования данных в пользовательский интерфейс
 fun BirthdayCardPreview() {
