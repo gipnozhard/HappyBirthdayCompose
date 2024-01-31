@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,7 +34,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingText(message = "Happy Birthday Andrey!", from = "From Pavel")
+                    GreetingImage(
+                        message = "Happy Birthday Andrey!",
+                        from = "From Pavel"
+                    )
                 }
             }
         }
@@ -72,10 +76,18 @@ fun GreetingImage(
     modifier: Modifier = Modifier
 ) {
     val image = painterResource(id = R.drawable.androidparty) // painterResource ф-ия загружает ресурс с возможностью рисования изображений и принимает идентификатор ресурса в качестве аргумента
-    Image(
-        painter = image,
-        contentDescription = null
-    )
+    Box(modifier) {
+        Image(
+            painter = image,
+            contentDescription = null
+        )
+        GreetingText(
+            message = message,
+            from = from,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(8.dp))
+    }
 }
 
 @Preview( // аннотация пердназначена только для предварительного просмотра ан панеле Design
