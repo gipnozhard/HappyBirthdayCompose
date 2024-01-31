@@ -6,3 +6,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composa
 
 а это ссылка на картинку для открытки дня рождения:
 https://github.com/google-developer-training/basic-android-kotlin-compose-birthday-card-app/blob/main/app/src/main/res/drawable-nodpi/androidparty.png
+
+
+Пример готовой открытки-приложения:
+![image](https://github.com/gipnozhard/HappyBirthdayCompose/assets/71705375/2fc52177-1281-445c-9216-34fb3cd224c2)
