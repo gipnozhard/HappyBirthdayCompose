@@ -66,7 +66,7 @@ fun GreetingText( // составная функция
             fontSize = 36.sp, // размер шрифта
             modifier = Modifier // модификатор в Compose
                 .padding(16.dp) // отступ подписи
-                .align(alignment = Alignment.End) // выравнивание по правому краю текста "от кого"
+                .align(alignment = Alignment.CenterHorizontally) // выравнивание по правому краю текста "от кого"
         )
     }
 }
